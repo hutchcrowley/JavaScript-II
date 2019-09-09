@@ -1,10 +1,15 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a closure of your own creation.
+
+
 function someFunc() {
-const someVar = "some variable";
-console.log(someVar);
-} 
-// };
+const name='Gorilla';
+function displayName() {
+  console.log(name);
+}
+displayName();
+}
+someFunc();
 
 
 // Keep it simple! Remember a closure is just a function
@@ -37,4 +42,4 @@ console.log(someVar);
   // Return an object that has two methods called `increment` and `decrement`.
   // `increment` should increment a counter variable in closure scope and return it.
   // `decrement` should decrement the counter variable and return it.
-};
+
