@@ -85,7 +85,7 @@ console.log(largeShirts);
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations and save the total into a ticketPriceTotal variable.
 let ticketPriceTotal = [];
 runners.forEach(element => ticketPriceTotal.push(element.donation))
-ticketPriceTotal=ticketPriceTotal.reduce((x,y)=>x+y)
+ticketPriceTotal = ticketPriceTotal.reduce((x, y) => x + y)
 console.log(ticketPriceTotal);
 
 
@@ -95,7 +95,7 @@ console.log(ticketPriceTotal);
 // Problem 1
 
 
-let emailArray= [];
+let emailArray = [];
 runners.forEach(function (object) {
   let email = object.email;
   emailArray.push(email);
