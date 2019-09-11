@@ -33,13 +33,47 @@ someFunc();
 // myCounter(); // 1
 // myCounter(); // 2
 
+/////// Hutch-Crowley function 'counterMaker'
+
+let count = 0;
+const counterMaker = () => {
+  
+const counter = () =>{
+  count++
+  return count
+};
+return counter();
+};
+
+
+
+console.log(counterMaker());
+console.log(counterMaker());
+console.log(counterMaker());
+
+/////// End Hutch-Crowley function 'counterMaker'
+
+
 // ==== Challenge 3: Make `counterMaker` more sophisticated ====
 // It should have a `limit` parameter. Any counters we make with `counterMaker`
 // will refuse to go over the limit, and start back at 1.
+
+// let count = 0;
+// const counterMaker = (limit) => {
+
+//   const counter = ()=> {
+//     count++
+//     return count 
+//   }
+// }
+
+// console.log(counter)
 
 // ==== Challenge 4: Create a counter function with an object that can increment and decrement ====
 // const counterFactory = () => {
   // Return an object that has two methods called `increment` and `decrement`.
   // `increment` should increment a counter variable in closure scope and return it.
   // `decrement` should decrement the counter variable and return it.
+
+
 
