@@ -3,11 +3,11 @@
 
 
 function someFunc() {
-const name='Gorilla';
-function displayName() {
-  console.log(name);
-}
-displayName();
+  const name = 'Gorilla';
+  function displayName() {
+    console.log(name);
+  }
+  displayName();
 }
 someFunc();
 
@@ -22,12 +22,12 @@ someFunc();
 
 // ==== Challenge 2: Implement a "counter maker" function ====
 // const counterMaker = () => {
-  // IMPLEMENTATION OF counterMaker:
-  // 1- Declare a `count` variable with a value of 0. We will be mutating it, so declare it using `let`!
-  // 2- Declare a function `counter`. It should increment and return `count`.
-  //      NOTE: This `counter` function, being nested inside `counterMaker`,
-  //      "closes over" the `count` variable. It can "see" it in the parent scope!
-  // 3- Return the `counter` function.
+// IMPLEMENTATION OF counterMaker:
+// 1- Declare a `count` variable with a value of 0. We will be mutating it, so declare it using `let`!
+// 2- Declare a function `counter`. It should increment and return `count`.
+//      NOTE: This `counter` function, being nested inside `counterMaker`,
+//      "closes over" the `count` variable. It can "see" it in the parent scope!
+// 3- Return the `counter` function.
 // };
 // Example usage: const myCounter = counterMaker();
 // myCounter(); // 1
@@ -36,20 +36,26 @@ someFunc();
 /////// Hutch-Crowley function 'counterMaker'
 
 let count = 0;
-const counterMaker = () => {
-  
-const counter = () =>{
-  count++
-  return count
+const counterMaker = (limit) => {
+  const counter = () => {
+    if (count < limit) {
+      count++;
+      return count;
+    }
+    else {
+      return count=0;
+    }
+  }
+  return counter();
 };
-return counter();
-};
 
 
+console.log(counterMaker(2));
+console.log(counterMaker(2));
+console.log(counterMaker(2));
+console.log(counterMaker(2));
+console.log(counterMaker(2));
 
-console.log(counterMaker());
-console.log(counterMaker());
-console.log(counterMaker());
 
 /////// End Hutch-Crowley function 'counterMaker'
 
