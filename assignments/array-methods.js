@@ -57,7 +57,7 @@ const runners = [
 
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs. Combine both the first and last names and populate a new array called `fullNames`. This array will contain just strings.
-let fullNames = [];
+const fullNames = [];
 runners.forEach(function (object) {
   let name = object.first_name + ' ' + object.last_name;
   fullNames.push(name);
@@ -67,7 +67,7 @@ console.log(fullNames);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runners' first names in uppercase because the director BECAME DRUNK WITH POWER. Populate an array called `firstNamesAllCaps`. This array will contain just strings.
-let firstNamesAllCaps = [];
+const firstNamesAllCaps = [];
 runners.map(element => {
   firstNamesAllCaps.push(element.first_name.toUpperCase());
 });
@@ -76,14 +76,14 @@ console.log(firstNamesAllCaps);
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue. We need a filtered version of the runners array, containing only those runners with large sized shirts so they can choose a different size. This will be an array of objects.
-let largeShirts = [];
+const largeShirts = [];
 largeShirts = runners.filter(x => x.shirt_size === "L")
 
 console.log(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations and save the total into a ticketPriceTotal variable.
-let ticketPriceTotal = [];
+const ticketPriceTotal = [];
 runners.forEach(element => ticketPriceTotal.push(element.donation))
 ticketPriceTotal = ticketPriceTotal.reduce((x, y) => x + y)
 console.log(ticketPriceTotal);
@@ -94,8 +94,7 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 
-
-let emailArray = [];
+const emailArray = [];
 runners.forEach(function (object) {
   let email = object.email;
   emailArray.push(email);
